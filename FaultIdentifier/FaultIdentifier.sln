@@ -7,6 +7,11 @@ Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "FaultIdentifier (Package)",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaultIdentifier", "FaultIdentifier\FaultIdentifier\FaultIdentifier.csproj", "{350E6824-6205-4798-9ED9-F0F4AEDF68BB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F7E98CFB-0753-4958-AAAF-47545CA9DB0F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|arm64 = Debug|arm64

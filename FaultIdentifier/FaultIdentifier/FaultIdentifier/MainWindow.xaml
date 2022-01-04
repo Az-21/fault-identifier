@@ -2,12 +2,220 @@
     x:Class="FaultIdentifier.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:FaultIdentifier"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <ScrollViewer>
+
+        <Grid
+            Padding="32"
+            Background="{ThemeResource AcrylicBackgroundFillColorDefaultBrush}"
+            ColumnSpacing="32">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="80" />
+                <RowDefinition Height="200" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!--  Title of App  -->
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="999"
+                Padding="0,0,0,40"
+                VerticalAlignment="Bottom"
+                Orientation="Vertical">
+
+                <TextBlock
+                    FontSize="32"
+                    FontWeight="Bold"
+                    Text="Transformer Fault Type Identifier" />
+
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Light"
+                    Text="Fault prediction using a logistic regression model" />
+            </StackPanel>
+
+            <!--  H2 Content  -->
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                FontSize="20"
+                Text="H₂ Content" />
+
+            <NumberBox
+                Grid.Row="2"
+                Grid.Column="0"
+                VerticalAlignment="Center"
+                AcceptsExpression="True"
+                PlaceholderText="H₂ content value"
+                SmallChange="10"
+                SpinButtonPlacementMode="Inline"
+                Value="0" />
+
+            <!--  CH4 Content  -->
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                FontSize="20"
+                Text="CH₄ Content" />
+
+            <NumberBox
+                Grid.Row="2"
+                Grid.Column="1"
+                VerticalAlignment="Center"
+                AcceptsExpression="True"
+                PlaceholderText="CH₄ content value"
+                SmallChange="10"
+                SpinButtonPlacementMode="Inline"
+                Value="0" />
+
+            <!--  C2H6 Content  -->
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="2"
+                FontSize="20"
+                Text="C₂H₆ Content" />
+
+            <NumberBox
+                Grid.Row="2"
+                Grid.Column="2"
+                VerticalAlignment="Center"
+                AcceptsExpression="True"
+                PlaceholderText="C₂H₆ content value"
+                SmallChange="10"
+                SpinButtonPlacementMode="Inline"
+                Value="0" />
+
+            <!--  C2H4 Content  -->
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="3"
+                FontSize="20"
+                Text="C₂H₄ Content" />
+
+            <NumberBox
+                Grid.Row="2"
+                Grid.Column="3"
+                VerticalAlignment="Center"
+                AcceptsExpression="True"
+                PlaceholderText="C₂H₄ content value"
+                SmallChange="10"
+                SpinButtonPlacementMode="Inline"
+                Value="0" />
+
+            <!--  C2H2 Content  -->
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="4"
+                FontSize="20"
+                Text="C₂H₂ Content" />
+
+            <NumberBox
+                Grid.Row="2"
+                Grid.Column="4"
+                VerticalAlignment="Center"
+                AcceptsExpression="True"
+                PlaceholderText="C₂H₂ content value"
+                SmallChange="10"
+                SpinButtonPlacementMode="Inline"
+                Value="0" />
+
+            <!--  Action buttons  -->
+            <Button
+                Grid.Row="3"
+                Grid.Column="3"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Background="LightGreen"
+                Content="Reset Content Values"
+                Style="{StaticResource AccentButtonStyle}" />
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="4"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Bottom"
+                Background="LightGreen"
+                Content="Identify Fault"
+                Style="{StaticResource AccentButtonStyle}" />
+
+
+            <!--  Results  -->
+            <StackPanel
+                Grid.Row="4"
+                Grid.Column="0"
+                Grid.ColumnSpan="999"
+                VerticalAlignment="Bottom"
+                Orientation="Vertical">
+                <TextBlock
+                    FontSize="20"
+                    FontWeight="SemiBold"
+                    Text="Fault Type: Go Corona Go" />
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Light"
+                    Opacity="0.6"
+                    Text="H₂ content: 10" />
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Light"
+                    Opacity="0.6"
+                    Text="CH₄ content: 20" />
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Light"
+                    Opacity="0.6"
+                    Text="C₂H₆ content: 30" />
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Light"
+                    Opacity="0.6"
+                    Text="C₂H₄ content: 40" />
+                <TextBlock
+                    FontSize="14"
+                    FontWeight="Light"
+                    Opacity="0.6"
+                    Text="C₂H₂ content: 50" />
+            </StackPanel>
+
+            <!--  Hyperlinks  -->
+            <StackPanel
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="999"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Orientation="Horizontal">
+
+                <HyperlinkButton
+                    Content="Logistic Regression Model"
+                    NavigateUri="https://github.com/Az-21/jupyter/blob/main/fault-identification/fid.ipynb"
+                    Opacity="0.9" />
+                <AppBarSeparator />
+                <HyperlinkButton
+                    Content="GitHub (Source Code)"
+                    NavigateUri="https://github.com/Az-21/fault-identifier"
+                    Opacity="0.9" />
+                <AppBarSeparator />
+                <HyperlinkButton
+                    Content="Training Database"
+                    NavigateUri="https://github.com/Az-21/jupyter/blob/main/fault-identification/dga.csv"
+                    Opacity="0.9" />
+            </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
 </Window>
