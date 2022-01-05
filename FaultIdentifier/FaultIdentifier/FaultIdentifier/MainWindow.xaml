@@ -56,6 +56,7 @@
                 Text="H₂ Content" />
 
             <NumberBox
+                Name="H2ContentNumberbox"
                 Grid.Row="2"
                 Grid.Column="0"
                 VerticalAlignment="Center"
@@ -73,6 +74,7 @@
                 Text="CH₄ Content" />
 
             <NumberBox
+                Name="CH4ContentNumberbox"
                 Grid.Row="2"
                 Grid.Column="1"
                 VerticalAlignment="Center"
@@ -90,6 +92,7 @@
                 Text="C₂H₆ Content" />
 
             <NumberBox
+                Name="C2H6ContentNumberbox"
                 Grid.Row="2"
                 Grid.Column="2"
                 VerticalAlignment="Center"
@@ -107,6 +110,7 @@
                 Text="C₂H₄ Content" />
 
             <NumberBox
+                Name="C2H4ContentNumberbox"
                 Grid.Row="2"
                 Grid.Column="3"
                 VerticalAlignment="Center"
@@ -124,6 +128,7 @@
                 Text="C₂H₂ Content" />
 
             <NumberBox
+                Name="C2H2ContentNumberbox"
                 Grid.Row="2"
                 Grid.Column="4"
                 VerticalAlignment="Center"
@@ -143,13 +148,14 @@
                 Style="{StaticResource AccentButtonStyle}" />
 
             <Button
+                Name="IdentifyFaultButton"
                 Grid.Row="3"
                 Grid.Column="4"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Bottom"
+                Click="IdentifyFaultButton_Click"
                 Content="Identify Fault"
                 Style="{StaticResource AccentButtonStyle}" />
-
 
             <!--  Results  -->
             <StackPanel
@@ -159,34 +165,34 @@
                 VerticalAlignment="Bottom"
                 Orientation="Vertical">
                 <TextBlock
+                    Name="FaultTypeResultTextbox"
                     FontSize="20"
-                    FontWeight="SemiBold"
-                    Text="Fault Type: Go Corona Go" />
+                    FontWeight="SemiBold" />
                 <TextBlock
+                    Name="H2ResultTextbox"
                     FontSize="14"
                     FontWeight="Light"
-                    Opacity="0.6"
-                    Text="H₂ content: 10" />
+                    Opacity="0.6" />
                 <TextBlock
+                    Name="CH4ResultTextbox"
                     FontSize="14"
                     FontWeight="Light"
-                    Opacity="0.6"
-                    Text="CH₄ content: 20" />
+                    Opacity="0.6" />
                 <TextBlock
+                    Name="C2H6ResultTextbox"
                     FontSize="14"
                     FontWeight="Light"
-                    Opacity="0.6"
-                    Text="C₂H₆ content: 30" />
+                    Opacity="0.6" />
                 <TextBlock
+                    Name="C2H4ResultTextbox"
                     FontSize="14"
                     FontWeight="Light"
-                    Opacity="0.6"
-                    Text="C₂H₄ content: 40" />
+                    Opacity="0.6" />
                 <TextBlock
+                    Name="C2H2ResultTextbox"
                     FontSize="14"
                     FontWeight="Light"
-                    Opacity="0.6"
-                    Text="C₂H₂ content: 50" />
+                    Opacity="0.6" />
             </StackPanel>
 
             <!--  Hyperlinks  -->
@@ -213,7 +219,6 @@
                     NavigateUri="https://github.com/Az-21/jupyter/blob/main/fault-identification/dga.csv"
                     Opacity="0.9" />
             </StackPanel>
-
         </Grid>
     </ScrollViewer>
 </Window>
