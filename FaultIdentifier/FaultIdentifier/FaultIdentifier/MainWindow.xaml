@@ -139,7 +139,6 @@
                 Grid.Column="3"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Bottom"
-                Background="LightGreen"
                 Content="Reset Content Values"
                 Style="{StaticResource AccentButtonStyle}" />
 
@@ -148,7 +147,6 @@
                 Grid.Column="4"
                 HorizontalAlignment="Stretch"
                 VerticalAlignment="Bottom"
-                Background="LightGreen"
                 Content="Identify Fault"
                 Style="{StaticResource AccentButtonStyle}" />
 
