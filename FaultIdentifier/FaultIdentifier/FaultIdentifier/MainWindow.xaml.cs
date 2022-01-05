@@ -32,4 +32,12 @@ public sealed partial class MainWindow : Window {
         FaultDescriptionResultTextbox.Text = faultInfo[1];
         FaultAdditionalInfoResultTextbox.Text = $"{faultInfo[2]}";
     }
+
+    private void ResetButton_Click(object sender, RoutedEventArgs e) {
+        H2ContentNumberbox.Value = 0;
+        CH4ContentNumberbox.Value = 0;
+        C2H6ContentNumberbox.Value = 0;
+        C2H4ContentNumberbox.Value = 0;
+        C2H2ContentNumberbox.Value = 0;
+    }
 }
