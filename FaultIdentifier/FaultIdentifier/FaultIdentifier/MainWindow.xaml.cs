@@ -28,6 +28,8 @@ public sealed partial class MainWindow : Window {
         // Update fault type
         int faultType = SkLearn.FaultType(dissolvedGasContent);
         List<string> faultInfo = StaticFunctions.FaultInfo(faultType);
-        FaultTypeResultTextbox.Text = $"Fault Type | {faultInfo[0]}";
+        FaultTypeResultTextbox.Text = $"{faultInfo[0]} Fault";
+        FaultDescriptionResultTextbox.Text = faultInfo[1];
+        FaultAdditionalInfoResultTextbox.Text = $"{faultInfo[2]}";
     }
 }

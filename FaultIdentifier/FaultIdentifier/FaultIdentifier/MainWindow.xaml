@@ -17,7 +17,7 @@
                 <RowDefinition Height="40" />
                 <RowDefinition Height="40" />
                 <RowDefinition Height="80" />
-                <RowDefinition Height="200" />
+                <RowDefinition Height="300" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -166,8 +166,17 @@
                 Orientation="Vertical">
                 <TextBlock
                     Name="FaultTypeResultTextbox"
-                    FontSize="20"
-                    FontWeight="SemiBold" />
+                    FontSize="26"
+                    FontWeight="Bold" />
+                <TextBlock
+                    Name="FaultDescriptionResultTextbox"
+                    FontSize="18"
+                    FontWeight="Normal" />
+                <TextBlock
+                    Name="FaultAdditionalInfoResultTextbox"
+                    FontSize="16"
+                    FontWeight="Normal" />
+                <AppBarSeparator />
                 <TextBlock
                     Name="H2ResultTextbox"
                     FontSize="14"

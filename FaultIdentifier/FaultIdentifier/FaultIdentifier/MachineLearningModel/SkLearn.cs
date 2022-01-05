@@ -50,6 +50,7 @@ public static class LinearMath {
 }
 
 public static class StaticFunctions {
+
     public static List<string> FaultInfo(int faultType) {
         List<string> faultInfo = new();
         switch(faultType) {
@@ -96,5 +97,4 @@ public static class StaticFunctions {
 
         return faultInfo;
     }
-
 }
