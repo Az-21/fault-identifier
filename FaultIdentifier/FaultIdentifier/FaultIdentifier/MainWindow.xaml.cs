@@ -5,6 +5,7 @@ namespace FaultIdentifier;
 public sealed partial class MainWindow : Window {
 
     public MainWindow() {
+        this.Title = "Transformer Fault Identifier";
         this.InitializeComponent();
     }
 
