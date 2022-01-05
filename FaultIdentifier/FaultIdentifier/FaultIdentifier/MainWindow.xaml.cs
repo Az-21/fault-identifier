@@ -1,5 +1,9 @@
-﻿namespace FaultIdentifier;
+﻿using FaultIdentifier.MachineLearningModel;
+
+namespace FaultIdentifier;
+
 public sealed partial class MainWindow : Window {
+
     public MainWindow() {
         this.InitializeComponent();
     }
@@ -22,6 +26,6 @@ public sealed partial class MainWindow : Window {
         C2H2ResultTextbox.Text = $"C₂H₂ content: {dissolvedGasContent[4]}";
 
         // Update fault type
-        FaultTypeResultTextbox.Text = $"Fault Type: {1 + 1}";
+        FaultTypeResultTextbox.Text = $"Fault Type: {SkLearn.FaultType(dissolvedGasContent)}";
     }
 }
