@@ -26,6 +26,8 @@ public sealed partial class MainWindow : Window {
         C2H2ResultTextbox.Text = $"C₂H₂ content: {dissolvedGasContent[4]}";
 
         // Update fault type
-        FaultTypeResultTextbox.Text = $"Fault Type: {SkLearn.FaultType(dissolvedGasContent)}";
+        int faultType = SkLearn.FaultType(dissolvedGasContent);
+        List<string> faultInfo = StaticFunctions.FaultInfo(faultType);
+        FaultTypeResultTextbox.Text = $"Fault Type | {faultInfo[0]}";
     }
 }

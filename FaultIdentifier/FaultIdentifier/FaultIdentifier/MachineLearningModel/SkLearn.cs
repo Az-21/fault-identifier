@@ -48,3 +48,53 @@ public static class LinearMath {
         return arrayArraySum;
     }
 }
+
+public static class StaticFunctions {
+    public static List<string> FaultInfo(int faultType) {
+        List<string> faultInfo = new();
+        switch(faultType) {
+            case 1:
+            faultInfo.Add("PD");
+            faultInfo.Add("Low Energy Partial Discharge");
+            faultInfo.Add("Partial discharge");
+            break;
+
+            case 2:
+            faultInfo.Add("D1");
+            faultInfo.Add("High Energy PD, Low Energy Discharge");
+            faultInfo.Add("Continuous spark, partial discharge with tracking");
+            break;
+
+            case 3:
+            faultInfo.Add("D2");
+            faultInfo.Add("High Energy Discharge");
+            faultInfo.Add("Arc with a high-energy density");
+            break;
+
+            case 4:
+            faultInfo.Add("T1");
+            faultInfo.Add("Low Thermal Fault");
+            faultInfo.Add("Thermal fault 150-300 °C");
+            break;
+
+            case 5:
+            faultInfo.Add("T2");
+            faultInfo.Add("Medium Thermal Fault");
+            faultInfo.Add("Thermal fault 300-700 °C, circulating current in windings");
+            break;
+
+            case 6:
+            faultInfo.Add("T3");
+            faultInfo.Add("High Thermal Fault");
+            faultInfo.Add("Thermal fault > 700 °C, circulating current in core, overheated joints");
+            break;
+
+            default:
+            new Exception("Unexpected fault type passed. Expected in range [1, 6]");
+            return faultInfo;
+        }
+
+        return faultInfo;
+    }
+
+}
