@@ -4,10 +4,6 @@ public sealed partial class MainWindow : Window {
         this.InitializeComponent();
     }
 
-    private void Button_Click(object sender, RoutedEventArgs e) {
-
-    }
-
     private void IdentifyFaultButton_Click(object sender, RoutedEventArgs e) {
         // Create list of dissolved gas content to perform logistic regression
         // Info: logistic regression model is order sensitive
